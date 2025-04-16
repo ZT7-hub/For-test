@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-      <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>اسم تطبيقك هنا</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZT7</title>
+    <link rel="stylesheet" href="style.css">
+      
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#6C63FF">
+      
+    <link rel="icon" href="https://i.imgur.com/bBHiI3r.png" sizes="192x192">
     <link rel="icon" href="https://i.imgur.com/bBHiI3r.png" type="image/png">
 </head>
 <body>
@@ -152,6 +157,12 @@
     document.addEventListener("DOMContentLoaded", function() {
         showPage('home'); 
     });
+
+          
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('Service Worker Registered'));
+  }
 </script>
 
 
